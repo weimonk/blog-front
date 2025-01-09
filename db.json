@@ -1,0 +1,44 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Getting Started with TypeScript",
+      "description": "A beginner's guide to TypeScript fundamentals",
+      "body": "TypeScript is a powerful superset of JavaScript that adds static typing to the language. In this post, we'll explore the basics of TypeScript and how it can improve your development workflow.\n\n## Why TypeScript?\n\n- **Static Typing**: Helps catch errors early.\n- **Improved IDE Support**: Better autocompletion and documentation.\n- **Scalability**: Easier to manage large codebases.\n\n## Getting Started\n\nTo get started with TypeScript, you need to install it globally:\n\n```bash\nnpm install -g typescript\n```\n\nThen, you can create a TypeScript file and compile it:\n\n```bash\ntsc yourfile.ts\n```\n",
+      "date": "2024-03-15T08:00:00Z",
+      "slug": "getting-started-with-typescript"
+    },
+    {
+      "id": 2,
+      "title": "React Best Practices 2024",
+      "description": "Modern React patterns and anti-patterns",
+      "body": "As React continues to evolve, it's important to stay up to date with the latest best practices. We'll cover hooks, performance optimization, and component architecture.\n\n## Hooks\n\n- **UseState**: Manage state in functional components.\n- **UseEffect**: Handle side effects in functional components.\n\n## Performance Optimization\n\n- **Memoization**: Use `React.memo` and `useMemo` to optimize performance.\n- **Code Splitting**: Use dynamic imports to split code.\n\n## Component Architecture\n\n- **Atomic Design**: Break down UI into small, reusable components.\n- **Container/Presentational Pattern**: Separate logic from UI.\n",
+      "date": "2024-03-14T10:30:00Z",
+      "slug": "react-best-practices-2024"
+    },
+    {
+      "id": 3,
+      "title": "Building with Vite",
+      "description": "Why Vite is the future of frontend tooling",
+      "body": "Vite offers lightning-fast development server startup and hot module replacement. Let's dive into what makes Vite special and how to leverage its features.\n\n## Why Vite?\n\n- **Fast Startup**: Instant server start.\n- **Hot Module Replacement**: Fast updates during development.\n- **Optimized Builds**: Efficient production builds.\n\n## Getting Started\n\nTo get started with Vite, you need to install it:\n\n```bash\nnpm init vite@latest\n```\n\nThen, you can start the development server:\n\n```bash\nnpm run dev\n```\n",
+      "date": "2024-03-13T15:45:00Z",
+      "slug": "building-with-vite"
+    },
+    {
+      "id": 4,
+      "title": "CSS Grid Mastery",
+      "description": "Advanced CSS Grid techniques explained",
+      "body": "CSS Grid has revolutionized web layouts. In this comprehensive guide, we'll explore advanced grid techniques that will level up your styling skills.\n\n## Why CSS Grid?\n\n- **Two-dimensional Layouts**: Manage both rows and columns.\n- **Responsive Design**: Create flexible and responsive layouts.\n\n## Advanced Techniques\n\n- **Grid Areas**: Define areas within the grid.\n- **Auto-placement**: Let the grid automatically place items.\n\n## Getting Started\n\nTo get started with CSS Grid, you need to define a grid container:\n\n```css\ndisplay: grid;\ngrid-template-columns: repeat(3, 1fr);\n```\n",
+      "date": "2024-03-12T09:15:00Z",
+      "slug": "css-grid-mastery"
+    },
+    {
+      "id": 5,
+      "title": "State Management in 2024",
+      "description": "Comparing modern state management solutions",
+      "body": "From Redux to Zustand, the state management landscape has evolved significantly. We'll compare different approaches and help you choose the right tool.\n\n## Redux\n\n- **Predictable State**: Centralized state management.\n- **Middleware**: Handle side effects with middleware.\n\n## Zustand\n\n- **Simplicity**: Minimal boilerplate.\n- **React Hooks**: Use hooks for state management.\n\n## Choosing the Right Tool\n\n- **Project Size**: Consider the size and complexity of your project.\n- **Team Experience**: Choose a tool that your team is comfortable with.\n",
+      "date": "2024-03-11T14:20:00Z",
+      "slug": "state-management-in-2024"
+    }
+  ]
+}

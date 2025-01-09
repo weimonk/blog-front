@@ -23,6 +23,7 @@ export default function HomePage() {
         setError({ message: err.message });
         setIsLoading(false);
       });
+    document.title = "weimonk - home";
   }, []);
 
   if (isLoading) return <div>Loading...</div>;

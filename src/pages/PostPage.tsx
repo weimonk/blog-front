@@ -2,10 +2,8 @@ import Header from "@/components/Header";
 import { formatToReadableDate } from "@/utils";
 import { ErrorObj, Post } from "@utils/types";
 import { useEffect, useState } from "react";
-import Markdown from "react-markdown";
 import { useParams } from "react-router";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { materialDark as style } from "react-syntax-highlighter/dist/esm/styles/prism";
+import Markdown from "react-markdown";
 
 export default function PostPage() {
   const { slug } = useParams();
@@ -30,8 +28,13 @@ export default function PostPage() {
       });
   });
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) {
+    document.title = "Loading post...";
+    return <div>Loading...</div>;
+  }
   if (error.message) return <div>Error: {error.message}</div>;
+
+  document.title = `weimonk - ${post.title.toLowerCase()}`;
 
   return (
     <div className="mx-auto max-w-4xl px-4 pb-40">
@@ -41,28 +44,7 @@ export default function PostPage() {
         <p className="mt-5 text-sm text-gray-300">
           {formatToReadableDate(post.date)}
         </p>
-        <Markdown
-          children={post.body}
-          className="prose prose-invert mt-10"
-          components={{
-            code(props) {
-              const { children, className, ...rest } = props;
-              const match = /language-(\w+)/.exec(className || "");
-              return match ? (
-                <SyntaxHighlighter
-                  codeTagProps={{ ...rest }}
-                  children={String(children).replace(/\n$/, "")}
-                  language={match[1]}
-                  style={style}
-                />
-              ) : (
-                <code {...rest} className={className}>
-                  {children}
-                </code>
-              );
-            },
-          }}
-        />
+        <Markdown className="prose prose-invert mt-10">{post.body}</Markdown>
       </main>
     </div>
   );

@@ -1,5 +1,4 @@
 import { formatToReadableDate } from "@/utils";
-import { format } from "date-fns";
 
 interface ArticleProps {
   id: number;
